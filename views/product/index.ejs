@@ -1,0 +1,16 @@
+<%- include('../layout/head.ejs') %>
+<table class="table">
+    <tr>
+        <th>ID</th>
+        <th>NAME</th>
+        <th>OPCIONES</th>
+    </tr>
+    <% for(var i=0; i<products.length; i++){ %>
+    <tr>
+        <td><%= products[i].Id %></td>
+        <td><%= products[i].Name %></td>
+        <td><a href="product/<%= products[i].Id %>">Editar</a></td>
+    </tr>
+    <% } %>
+</table>
+<%- include('../layout/footer.ejs') %>
